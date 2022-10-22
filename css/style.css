@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+
+}
+html {
+  scroll-behavior: smooth;
+  --webkit-scroll-behavior: smooth;
+  --moz-scroll-behavior: smooth;
+}
+:root {
+  --yellow : #ffc400;
+  --red : #ff3150;
+  --dark-color:#19283f;
+  --main-color: #33d1cc;
+  --section-color: #eff7fa;
+}
+
+.navbar {
+  background-color: var(--dark-color);
+}
+.navbar .navbar-nav .nav-link:hover ,.navbar .navbar-nav .nav-link.active ,.navbar .navbar-nav .nav-link:focus{
+  color: var(--main-color) !important; 
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded ="true"] {
+  border-color: var(--main-color) !important;
+}
+.navbar .navbar-toggler {
+  color: white;
+}
+.main-btn {
+  background-color:var(--red) ;
+  color: var(--yellow);
+  text-transform: uppercase;
+}
+
+.main-btn:hover {
+  background-color: var(--red);
+  color: var(--yellow)
+}
+
+.search i {
+  color: var(--main-color);
+
+}
+.search::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  background-color: var(--main-color);
+  width: 1px;
+  left: 0;
+}
+/* end navbar */
+
+/* start landing */
+.landing {
+  min-height: calc(100vh - 72px);
+  background-color: var(--dark-color);
+}
+.landing .landing-btn {
+  background-color: var(--red);
+  color: var(--yellow)
+} 
+/* end landing */
+
+
+/* start features */
+.main-title::after {
+  content :" ";
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background-color: var(--main-color);
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.icon-holder {
+  height: 200px ;
+}
+.icon-holder i {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.icon-holder .number {
+  font-size: 12rem;
+  color: var(--section-color)
+}
+.icon-holder .details {
+  color: var(--main-color)
+}
+
+/* end features */
+
+/* start our work */
+.our-work {
+  background-color: var(--section-color);
+}
+ul li.active {
+  background-color: var(--red);
+  color: var(--yellow);
+}
+ul li {
+  cursor: pointer;
+}
+ul li:not(.active):hover {
+  color: var(--red)
+}
+.our-work .row .box {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.our-work .row .box::before {
+  content: attr(data-work);
+  position: absolute;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px) ;
+  background-color: #33d1cca3;
+  transition: .4s;
+  color: #fff ;
+  font-weight: bold;
+  transform: translateX(calc(-100% - 5px));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+.our-work .row .box:hover::before {
+  transform: translateX(0);
+}
+/* end our work */
+
+/* start stuff */
+.stuff .description {
+  max-width: 500px ;
+}
+/* end stuff */
+
+/* start team */
+.team {
+  background-color: var(--section-color)
+}
+.team h2 {
+  color: var(--yellow)
+}
+.team .row h4 {
+  background-color: var(--main-color);
+}
+/* end team */
+
+/* start project */
+.projec {
+  background-color: var(--dark-color)
+}
+/* end project */
+
+/* start subscirbe */
+.subscribe {
+  background-color: var(--yellow);
+}
+
+.subscribe form input {
+  border: none;
+  caret-color: #fff;
+  border-bottom: 1px solid #fff;
+}
+.subscribe form input::placeholder {
+  color: #fff;
+}
+.subscribe form input:focus {
+  outline: none;
+}
+.subscribe .btn {
+  background-color: var(--dark-color);
+  color: var(--yellow)
+}
+/* end subscirbe */
+
+/* start footer */
+.footer {
+  background-color: var(--dark-color)
+}
+
+.footer .copy-right p .main-color {
+  color: var(--main-color);
+}
+.footer .copy-right p span:not(.main-color) {
+  color: var(--yellow)
+}
+.footer ul li.title {
+  cursor: auto;
+}
+.footer .links li:not(.title) {
+  transition: .4s;
+}
+.footer .links li:not(.title):hover {
+  color: var(--red) !important;
+}
+
+.footer ul .facebook {
+  background-color: #1877f2;
+}
+.footer ul .twitter {
+  background-color: #1da1f2
+}
+.footer ul .linked {
+  background-color: #0077b5;
+}
+.footer ul .youtube {
+  background-color: #ff0000;
+}
+
+/* end footer */
